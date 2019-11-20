@@ -1,0 +1,154 @@
+.list {
+	margin: 20px auto 0;
+	position: relative;
+	width: 1100px;
+	height: 100px;
+	li {
+		width: 260px;
+		height: 100px;
+		margin: 0 0 10px 10px;
+		line-height: 100px;
+		float: left;
+		position: relative;
+		a {
+			display: block;
+			width: 256px;
+			height: 96px;
+			text-align: center;
+			font-size: 24px;
+			background: #f8f8f8;
+			border-radius: 10px;
+			border: solid 2px transparent;
+			span {
+				width: 256px;
+				height: 14px;
+				background: #FFF;
+				border-left: solid 2px #82a2f1;
+				border-right: solid 2px #82a2f1;
+				position: absolute;
+				left: 0;
+				bottom: -12px;
+				z-index: 9;
+				display: none;
+			}
+		}
+		a:hover {
+			border: solid 2px #82a2f1;
+			background: #FFF;
+			color: #2c65d8;
+			border-bottom: none;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+			span {
+				display: block;
+			}
+		}
+		a.on {
+			border: solid 2px #82a2f1;
+			background: #FFF;
+			color: #2c65d8;
+			border-bottom: none;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+			span {
+				display: block;
+			}
+		}
+	}
+}
+.subMenuBox {
+	width: 1080px;
+	margin: 10px auto 0;
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	background: #FFF;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	.subMenu {
+		overflow: hidden;
+		padding-top: 10px;
+		display: none;
+		li {
+			width: 255px;
+			height: 76px;
+			float: left;
+			margin: 0 0 10px 10px;
+			line-height: 76px;
+			position: relative;
+			a {
+				display: block;
+				width: 255px;
+				height: 76px;
+				text-align: center;
+				font-size: 20px;
+				border-radius: 10px;
+				background: #f8f8f8;
+				span {
+					width: 255px;
+					height: 14px;
+					background: #f0f0f0;
+					position: absolute;
+					left: 0;
+					bottom: -12px;
+					z-index: 9;
+					display: none;
+				}
+			}
+			a:hover {
+				background: #FFF;
+				color: #2c65d8;
+				border-bottom: none;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+				background: #f0f0f0;
+				span {
+					display: block;
+				}
+			}
+			a.on {
+				background: #FFF;
+				color: #2c65d8;
+				border-bottom: none;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+				background: #f0f0f0;
+				span {
+					display: block;
+				}
+			}
+		}
+	}
+}
+.subMenuBox_second {
+	width: 1050px;
+	margin-left: 10px;
+	overflow: hidden;
+	display: none;
+	.secSubMenu {
+		overflow: hidden;
+		display: none;
+		background: #f0f0f0;
+		border-radius: 10px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		padding-top: 10px;
+		li {
+			width: 251px;
+			height: 76px;
+			float: left;
+			margin: 0 0 10px 10px;
+			line-height: 76px;
+			a {
+				display: block;
+				width: 249px;
+				height: 74px;
+				text-align: center;
+				font-size: 18px;
+				border-radius: 10px;
+				background: #f0f0f0;
+				border: solid 1px #2c65d8;
+			}
+		}
+	}
+}

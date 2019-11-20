@@ -1,0 +1,91 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+    <title>登录</title>
+     
+</head>
+<body class="new_body">
+<div class="bg bg_new">
+  <!--头部-->
+  <div class="login_top login_top_new">
+      <ul>
+         <li><a href="http://hdqw.bjhd.gov.cn/" target="_blank"><i class="qw"></i>区委</a></li>
+         <li><a href="http://hdrd.bjhd.gov.cn/" target="_blank"><i class="qrd"></i>区人大</a></li>
+         <li><a href="http://www.bjhd.gov.cn/" target="_blank"><i class="qzf"></i>区政府</a></li>
+         <li><a href="http://hdzx.bjhd.gov.cn/" target="_blank"><i class="qzx"></i>区政协</a></li>
+      </ul>
+  </div>
+  <!--头部 end-->
+  <div style="clear:both;"></div>
+  <!--登录框-->
+  <div class="login_container"> 
+     <div class="logo logo_new"><img src="http://www.bjhd.gov.cn:80/yhzx/plug-in/login/images/logo.png"></div>
+     <div class="login_box login_box_new">
+         <div class="login_box_right login_box_right_new">
+             <h3 class="user_login user_login_new">账号登录</h3>
+             <form class="registerform" id="registerform"  action="#" method="post">
+                 <input type="hidden" id="reqUrl" name="reqUrl" value="">
+                 <div class="input_list input_list_new">
+                     <div class="input"><i class="name_icon"></i>
+                     <input type="text" id="yhzxun" name="yhzxun" iscookie="true" class="long_input" placeholder="请输入用户名" onblur="javascript:checkuser();" value="">
+                     </div>
+                     <div class="Validform_checktip" id="unid" style="padding-left:20px;"></div>
+                 </div>
+                 <div class="input_list input_list_new">
+                     <div class="input"><i class="password_icon"></i><input type="password" class="long_input" id="userpwd" name="userpwd" iscookie="true" placeholder="请输入密码"  onblur="javascript:checkpwd();"></div>
+                     <div class="Validform_checktip" id="pwdid" style="padding-left:20px;"></div>
+                 </div>
+                 <div class="input_list input_list_new">
+                     <div class="input"><i class="yzm_icon"></i><input type="text" class="long_input" id="yzm" name="yzm" style=""  placeholder="请输入验证码"  onblur="javascript:checkyzm();">
+					 <!-- <img id="randCodeImage" src="randCodeImage" style="height:35px;width:105px;" /> -->
+					 <div id="v_container" style="height: 35px; width: 105px; display: inline-block;"></div>
+					 </div>
+                     <div class="Validform_checktip" id="yzmid" style="padding-left:20px;"></div>
+                 </div>
+                 <div class="login_list input_list_new input_list_new1">
+                      <span class="remember"><input type="checkbox" class="regular-checkbox" id="remFlag" value="0" onclick="remember();">
+                      <label for="remFlag" style="width: 80px;"><em style="margin-left: 20px;position: relative;top: -3px;">记住密码</em></label>
+                      </span>
+                      <a href="retrievepass.html">忘记密码</a>
+                 </div>
+                 <div class="input_list input_list_paw" style="position: relative;top:30px;">
+                     <a href="javascript:subm();" class="a_zc a_zc_new">登录</a>
+                 </div>
+                 <div class="input_list input_list_re input_list_re_new" style="position: relative;top:30px;margin-bottom: 20px;">
+                     <span class="direct_login">还没有账号？<a href="register.html">点我注册</a></span>
+                 </div>
+             </form>
+         </div>
+        
+     </div>
+  </div>
+  <!--登录框 end-->
+  </div>
+  <div style="clear:both;"></div>
+  <script type="text/javascript" src="resources/js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="resources/js/gVerify.js"></script>
+    <script>
+        var verifyCode = new GVerify("v_container");
+		
+    	function checkyzm(){
+    		var yzm=verifyCode.validate(document.getElementById("yzm").value);
+    		if(yzm){
+    		    $("#yzmid").text("验证信息通过！");
+    			$("#yzmid").prop("class","Validform_checktip Validform_right");
+    		}else{
+    			$("#yzmid").text("验证码错误！");
+     			$("#yzmid").prop("class","Validform_checktip Validform_wrong");
+    		}
+    	}
+		
+    </script>
+	</body>
+</html>
